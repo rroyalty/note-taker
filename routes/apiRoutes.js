@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const path = require("path");
-const dbData = require('../Assets/db/db.json');
+const dbData = require('../public/db/db.json');
 const { v4: uuidv4 } = require('uuid');
 const { fstat } = require("fs");
 
