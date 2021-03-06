@@ -14,7 +14,7 @@ router.post("/notes", (req, res) => {
         title: req.body.title,
         text: req.body.text,
         id: uuidv4()
-    }
+    };
     dbData.push(newNote);
     res.json(dbData);
     });
