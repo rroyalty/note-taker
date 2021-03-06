@@ -72,6 +72,8 @@ const handleNoteSave = () => {
     text: noteText.value,
   };
   saveNote(newNote).then(() => {
+    noteTitle.setAttribute('readonly', false);
+    noteText.setAttribute('readonly', false);
     getAndRenderNotes();
     renderActiveNote();
   });
