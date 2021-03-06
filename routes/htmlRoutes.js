@@ -4,8 +4,6 @@ const path = require("path");
 
 router.get("/index", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/index.html"));
-    console.log(req);
-    console.log(res);
 });
 
 router.get("/notes", (req, res) => {

@@ -17,9 +17,8 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Routes
 
-app.use("/", htmlRoutes);
 app.use("/api/", apiRoutes);
-
+app.use("/", htmlRoutes);
 
 // Starts the server to begin listening
 
