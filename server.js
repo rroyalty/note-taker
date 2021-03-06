@@ -2,6 +2,7 @@
 
 const express = require('express');
 const path = require('path');
+const apiRoutes = require("./routes/apiRoutes");
 const htmlRoutes = require("./routes/htmlRoutes");
 
 // Sets up the Express App
@@ -15,7 +16,8 @@ app.use(express.json());
 
 // Routes
 
-app.use("/", htmlRoutes)
+app.use("/", htmlRoutes);
+app.use("/api/", apiRoutes);
 
 
 // Starts the server to begin listening

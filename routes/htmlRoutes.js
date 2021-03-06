@@ -4,14 +4,16 @@ const path = require("path");
 
 router.get("/index", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/index.html"));
+    console.log(req);
+    console.log(res);
 });
 
 router.get("/notes", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/notes.html"));
+});
+
+router.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/index.html"));
 })
-
-// router.get("/notes.html", (req, res) => { });
-
-// router.get("*", (req, res) => { })
 
 module.exports = router;
