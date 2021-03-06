@@ -61,6 +61,8 @@ const renderActiveNote = () => {
   } else {
     noteTitle.value = '';
     noteText.value = '';
+    noteTitle.setAttribute('readonly', false);
+    noteText.setAttribute('readonly', false);
   }
 };
 
