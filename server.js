@@ -15,7 +15,6 @@ app.use(express.json());
 
 // Routes
 
-console.log(app.use("/", htmlRoutes));
 app.use("/", htmlRoutes)
 
 
