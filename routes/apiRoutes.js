@@ -16,6 +16,7 @@ router.post("/notes", (req, res) => {
         id: uuidv4()
     }
     dbData.push(newNote);
+    res.json(dbData);
     });
 
 module.exports = router;
