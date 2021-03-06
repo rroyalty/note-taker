@@ -61,8 +61,8 @@ const renderActiveNote = () => {
   } else {
     noteTitle.value = '';
     noteText.value = '';
-    noteTitle.setAttribute('readonly', false);
-    noteText.setAttribute('readonly', false);
+    noteTitle.removeAttribute('readonly');
+    noteText.removeAttribute('readonly');
   }
 };
 
@@ -72,8 +72,6 @@ const handleNoteSave = () => {
     text: noteText.value,
   };
   saveNote(newNote).then(() => {
-    noteTitle.setAttribute('readonly', false);
-    noteText.setAttribute('readonly', false);
     getAndRenderNotes();
     renderActiveNote();
   });
@@ -113,6 +111,8 @@ const handleNewNoteView = (e) => {
 const handleRenderSaveBtn = () => {
   if (!noteTitle.value.trim() || !noteText.value.trim()) {
     hide(saveNoteBtn);
+    noteTitle.removeAttribute('readonly');
+    noteText.removeAttribute('readonly');alse);
   } else {
     show(saveNoteBtn);
   }
