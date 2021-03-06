@@ -15,7 +15,9 @@ app.use(express.json());
 
 // Routes
 
-app.use("/", htmlRoutes);
+console.log(app.use("/", htmlRoutes));
+app.use("/", htmlRoutes)
+
 
 // Starts the server to begin listening
 
