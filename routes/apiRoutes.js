@@ -21,7 +21,7 @@ router.post("/notes", (req, res) => {
 
 router.delete("/notes/:id", (req, res) => {
     let note = dbData.findIndex( (ele) => {
-        return ele.id == req.params.id
+        return ele.id;
     });
     dbData.splice(note,1);
     res.json(dbData);
